@@ -1,0 +1,230 @@
+=================== Error ===================
+Time:2023-11-26 00:56:58
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:57:01
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '8', '5', '6', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 00:57:02
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:57:43
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:57:45
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '10', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 00:57:46
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '8', '5', '6', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 00:57:47
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:57:48
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:57:49
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '5', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:58:03
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 00:58:05
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '10', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 00:59:22
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '10', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 01:03:55
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:03:58
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:05:24
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:05:31
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:05:32
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', 'down')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:08:13
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '12', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 01:08:24
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '12', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+
+=================== Error ===================
+Time:2023-11-26 01:08:46
+Message:Table 'lyf_server.table_name' doesn't exist
+------
+SQL:1146
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '12', 'up')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:45)
+
+=================== Error ===================
+Time:2023-11-26 01:11:31
+Message:Unknown column 'sort_type' in 'field list'
+------
+SQL:1054
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', '0')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:11:32
+Message:Unknown column 'sort_type' in 'field list'
+------
+SQL:1054
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '6', '10', '6', '0')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:60)
+
+=================== Error ===================
+Time:2023-11-26 01:11:33
+Message:Unknown column 'sort_type' in 'field list'
+------
+SQL:1054
+CALL lyfsys_update_sort('sys_menu', 'menu_id', '11', '6', '10', '1')
+------
+lyf.common.DB.update(DB.java:193)
+lyf.system.api.SystemCommonApi.sort(SystemCommonApi.java:44)
+

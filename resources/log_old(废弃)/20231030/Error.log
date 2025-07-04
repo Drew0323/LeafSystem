@@ -1,0 +1,38 @@
+=================== Error ===================
+Time:2023-10-30 13:43:02
+Message:null
+------
+lyf.common.util.Str.eval(Str.java:65)
+lyf.system.api.SystemApi.upload(SystemApi.java:113)
+
+=================== Error ===================
+Time:2023-10-30 14:12:18
+Message:Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+------
+
+=================== Error ===================
+Time:2023-10-30 14:13:46
+Message:Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+------
+
+=================== Error ===================
+Time:2023-10-30 16:58:33
+Message:null
+------
+lyf.common.IO.suffix(IO.java:25)
+lyf.system.api.SystemApi.upload(SystemApi.java:108)
+
+=================== Error ===================
+Time:2023-10-30 16:59:40
+Message:null
+------
+lyf.common.IO.suffix(IO.java:25)
+lyf.system.api.SystemApi.upload(SystemApi.java:112)
+
+=================== Error ===================
+Time:2023-10-30 17:00:15
+Message:null
+------
+lyf.common.IO.suffix(IO.java:25)
+lyf.system.api.SystemApi.upload(SystemApi.java:113)
+

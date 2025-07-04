@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf 后台管理系统</title>
+    <link rel="stylesheet" href="/lib/ant-design-vue/antd.min.css">
+    <link rel="stylesheet" href="/lib/leaf-system/leaf-system.css">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="/lib/_icon/materialdesignicons/css/materialdesignicons.min.css">
+    <!-- 图片预览插件 -->
+    <link rel="stylesheet" href="/lib/viewer/viewer.min.css">
+    <!-- markdown -->
+    <link rel="stylesheet" href="/lib/editormd/css/editormd.min.css">
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="/lib/highlight_11.7.0/highlight.min.css">
+</head>
+<body>
+<!-- 后台主容器 -->
+<div id="ls-main-app">
+    <a-layout>
+        <!-- 侧边栏 -->
+        <a-layout-sider
+            :theme="menuTheme"
+            :trigger="null"
+            collapsible
+            v-model="collapsed"
+            width="250"
+        >
+            <div class="ls-main-logo" :theme="menuTheme">
+                <span class="mdi mdi-leaf" style="color: green;"></span>
+                <span v-if="!collapsed" style="margin-left: 10px;">Leaf后台管理系统</span>
+            </div>
+            <a-menu
+                :theme="menuTheme"
+                mode="inline"
+                :open-keys="openKeys"
+                :selectedKeys="selectedKeys"
+                v-model="selectedKeys"
+                @click="handleMenuClick"
+                :inlineCollapsed="collapsed"
+                v-on:open-change="onOpenChange"
+                class="ls-main-menu"
+            >
+                <template v-for="item in menuTreeData">
+                    <lf-menu-item :item="item" :key="item.menu_id"/>
+                </template>
+            </a-menu>
+        </a-layout-sider>
+        <!-- 主内容区 -->
+        <a-layout>
+            <!-- 顶部导航 -->
+            <a-layout-header class="ls-main-header">
+                <div>
+                    <a-icon
+                        class="trigger"
+                        :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+                        @click="collapsed = !collapsed"
+                        style="font-size: 18px; cursor: pointer;"
+                    ></a-icon>
+                    <a-icon
+                        type="reload"
+                        @click="handleRefresh"
+                        style="margin-left: 24px; font-size: 18px; cursor: pointer;"
+                        title="刷新"
+                    ></a-icon>
+                </div>
+                <div class="ls-main-header-right">
+                    <a-icon type="bell" class="ls-main-header-action"></a-icon>
+                    <a-icon type="mail" class="ls-main-header-action"></a-icon>
+                    <a-dropdown>
+                        <div class="ls-main-user-avatar">
+                            <a-avatar :src="$ls.backendUser.showAvatar"></a-avatar>
+                            <span v-if="!collapsed" style="margin-left: 5px;">{{$ls.backendUser.name}}</span>
+                        </div>
+                        <a-menu slot="overlay">
+                            <a-menu-item><a-icon type="user"></a-icon> 个人中心</a-menu-item>
+                            <a-menu-item><a-icon type="setting"></a-icon> 设置</a-menu-item>
+                            <a-menu-divider></a-menu-divider>
+                            <a-menu-item @click="handleLogout"><a-icon type="logout"></a-icon> 退出登录</a-menu-item>
+                        </a-menu>
+                    </a-dropdown>
+                    <a-icon type="setting" @click="isShowDrawer = true"></a-icon>
+                </div>
+            </a-layout-header>
+            <!-- 面包屑导航 -->
+            <div class="ls-main-breadcrumb">
+                <template v-for="(item, index) in breadcrumb"><span class="ls-main-breadcrumb-item" :key="index">{{item}}</span></template>
+            </div>
+            <a-spin v-if="isShowLoadIcon" style="margin-top: 200px;width: 100%;"></a-spin>
+            <!-- 内容区 -->
+            <a-layout-content id="ls-main-container" class="ls-main-content" :class="isHeaderFixed?'ls-main-header-fixed-content':''">
+            </a-layout-content>
+        </a-layout>
+    </a-layout>
+    <!-- 设置抽屉 -->
+    <a-drawer
+        title="系统设置"
+        placement="right"
+        :closable="true"
+        :visible="isShowDrawer"
+        @close="isShowDrawer = false"
+        width="300"
+    >
+        <a-divider>菜单设置</a-divider>
+        <a-radio-group v-model="menuTheme" style="width: 100%;">
+            <a-radio-button value="dark" style="width: 50%; text-align: center;">侧边栏暗色</a-radio-button>
+            <a-radio-button value="light" style="width: 50%; text-align: center;">侧边栏亮色</a-radio-button>
+        </a-radio-group>
+        <a-divider>其他设置</a-divider>
+        <div style="margin-bottom: 16px;">
+            <a-switch v-model="isHeaderFixed"></a-switch> 固定头部
+        </div>
+    </a-drawer>
+</div>
+</body>
+<!-- 主页面依赖 -->
+<!--<script src="/lib/jquery-3.1.0.min.js"></script>-->
+<!--<script src="/lib/vue/vue.min.js"></script>-->
+<script src="/lib/leaf-system/antd1.7.8.all.min.js"></script>
+<!-- 浏览器方式下有些事件无法响应，需要引入vue-dash-event插件 -->
+<script src="/lib/vue/vue-dash-event.js"></script>
+<script src="/lib/qiankun/index.umd.min.js"></script>
+<script src="/lib/leaf-common/leaf-common.min.js"></script>
+<!-- 表格拖拽排序 -->
+<script src="/lib/Sortable.min.js"></script>
+<!-- 图片预览 -->
+<script src="/lib/viewer/viewer.min.js"></script>
+<!-- 图表 -->
+<script src="/lib/echarts.min.js"></script>
+<!-- 富文本 -->
+<!--<script src="/lib/ckeditor.js"></script>-->
+<!-- markdown -->
+<!--<script src="/lib/editormd/editormd.min.js"></script>-->
+<script src="/lib/editormd/lib/marked.min.js"></script>
+<!-- 代码高亮 -->
+<script src="/lib/highlight_11.7.0/highlight.all.js"></script>
+<!-- 子页面依赖 -->
+
+<script src="/lib/leaf-system/leaf-system-common.js"></script>
+<script>
+    createLeafSystemApp();
+</script>
+</html>

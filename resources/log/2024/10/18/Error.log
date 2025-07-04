@@ -1,0 +1,63 @@
+[ ERROR - 2024-10-18 22:48:29 ================================================== ]
+ErrorMsg:class java.util.ArrayList cannot be cast to class leaf.common.object.JSONList (java.util.ArrayList is in module java.base of loader 'bootstrap'; leaf.common.object.JSONList is in unnamed module of loader 'app')
+------
+leaf.common.object.JSONMap.getList(JSONMap.java:136)
+leaf.system.api.CodeGeneration.generationCode(CodeGeneration.java:89)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 22:48:39 ================================================== ]
+ErrorMsg:class java.util.ArrayList cannot be cast to class leaf.common.object.JSONList (java.util.ArrayList is in module java.base of loader 'bootstrap'; leaf.common.object.JSONList is in unnamed module of loader 'app')
+------
+leaf.common.object.JSONMap.getList(JSONMap.java:136)
+leaf.system.api.CodeGeneration.generationCode(CodeGeneration.java:89)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 22:48:58 ================================================== ]
+ErrorMsg:class java.util.ArrayList cannot be cast to class leaf.common.object.JSONList (java.util.ArrayList is in module java.base of loader 'bootstrap'; leaf.common.object.JSONList is in unnamed module of loader 'app')
+------
+leaf.common.object.JSONMap.getList(JSONMap.java:136)
+leaf.system.api.CodeGeneration.generationCode(CodeGeneration.java:89)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:36:19 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:132)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:37:12 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:134)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:38:23 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:134)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:39:05 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:134)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:39:25 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:134)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:40:24 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:134)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-18 23:41:45 ================================================== ]
+ErrorMsg:class java.util.LinkedHashMap cannot be cast to class leaf.common.object.JSONMap (java.util.LinkedHashMap is in module java.base of loader 'bootstrap'; leaf.common.object.JSONMap is in unnamed module of loader 'app')
+------
+leaf.system.api.CodeGenerationApi.generationCode(CodeGenerationApi.java:133)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+

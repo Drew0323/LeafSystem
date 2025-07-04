@@ -1,0 +1,30 @@
+[ ERROR - 2024-10-15 22:26:53 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupI' at line 1
+------
+SQL:1064
+select config_key,config_value,b.role_id from sys_config a    left join sys_config_role_rel b on a.config_id = b.config_id where (isnull(b.role_id)b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupId','AllowUploadFileSize','AllowUploadFileSuffix')
+------
+leaf.common.DB.query(DB.java:146)
+leaf.system.api.SystemConfigApi.getSystemConfig(SystemConfigApi.java:63)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-15 22:26:56 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupI' at line 1
+------
+SQL:1064
+select config_key,config_value,b.role_id from sys_config a    left join sys_config_role_rel b on a.config_id = b.config_id where (isnull(b.role_id)b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupId','AllowUploadFileSize','AllowUploadFileSuffix')
+------
+leaf.common.DB.query(DB.java:146)
+leaf.system.api.SystemConfigApi.getSystemConfig(SystemConfigApi.java:63)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-10-15 22:27:01 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupI' at line 1
+------
+SQL:1064
+select config_key,config_value,b.role_id from sys_config a    left join sys_config_role_rel b on a.config_id = b.config_id where (isnull(b.role_id)b.role_id in (2,3)) and config_key in ('SystemName','AllowBackendLoginUserGroupId','AllowUploadFileSize','AllowUploadFileSuffix')
+------
+leaf.common.DB.query(DB.java:146)
+leaf.system.api.SystemConfigApi.getSystemConfig(SystemConfigApi.java:63)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+

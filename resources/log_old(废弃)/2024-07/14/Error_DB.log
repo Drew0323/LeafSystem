@@ -1,0 +1,200 @@
+[ ERROR - 2024-07-14 18:12:46 ================================================== ]
+ErrorMsg:Column 'user_id' in field list is ambiguous
+------
+SQL:1052
+SELECT DISTINCT user_id, name, account, password, personal_signature
+	, avatar, birthday, phone, email, real_name
+	, idcard, sex, is_disable, login_ip, login_time
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+LIMIT 0, 10
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:436)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:21 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'4\')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_user a    left join sys_user_role_rel b on a.user_id = b.user_id  where b.role_id in (\'4\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:21 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'4\')' at line 1
+------
+SQL:1064
+select a.user_id,c.role_id,c.role_name from sys_user a    inner join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id  where b.role_id in (\'4\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:212)
+
+[ ERROR - 2024-07-14 18:43:24 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'3\')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_user a    left join sys_user_role_rel b on a.user_id = b.user_id  where b.role_id in (\'3\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:24 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'3\')' at line 1
+------
+SQL:1064
+select a.user_id,c.role_id,c.role_name from sys_user a    inner join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id  where b.role_id in (\'3\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:212)
+
+[ ERROR - 2024-07-14 18:43:32 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'2\')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_user a    left join sys_user_role_rel b on a.user_id = b.user_id  where b.role_id in (\'2\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:32 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'2\')' at line 1
+------
+SQL:1064
+select a.user_id,c.role_id,c.role_name from sys_user a    inner join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id  where b.role_id in (\'2\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:212)
+
+[ ERROR - 2024-07-14 18:43:41 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'2\',\'1\')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_user a    left join sys_user_role_rel b on a.user_id = b.user_id  where b.role_id in (\'2\',\'1\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:41 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'2\',\'1\')' at line 1
+------
+SQL:1064
+select a.user_id,c.role_id,c.role_name from sys_user a    inner join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id  where b.role_id in (\'2\',\'1\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:212)
+
+[ ERROR - 2024-07-14 18:43:46 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1\')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_user a    left join sys_user_role_rel b on a.user_id = b.user_id  where b.role_id in (\'1\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 18:43:46 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1\')' at line 1
+------
+SQL:1064
+select a.user_id,c.role_id,c.role_name from sys_user a    inner join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id  where b.role_id in (\'1\') 
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:212)
+
+[ ERROR - 2024-07-14 19:05:47 ================================================== ]
+ErrorMsg:Column 'user_id' in order clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+ORDER BY user_id ASC
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 19:05:49 ================================================== ]
+ErrorMsg:Column 'user_id' in order clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+ORDER BY user_id DESC
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 19:05:50 ================================================== ]
+ErrorMsg:Column 'user_id' in order clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+ORDER BY user_id ASC
+------
+lyf.common.DB.query(DB.java:146)
+lyf.common.DB.sqlToJSONMap(DB.java:422)
+lyf.common.DB.sqlToJSONMap(DB.java:397)
+lyf.system.api.UserApi.getUserList(UserApi.java:205)
+
+[ ERROR - 2024-07-14 20:26:31 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'update1 sys_role set is_allow_login_backend = 1 where role_id = '3'' at line 1
+------
+SQL:1064
+update1 sys_role set is_allow_login_backend = 1 where role_id = '3'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.RoleApi.updateRole(RoleApi.java:82)
+
+[ ERROR - 2024-07-14 21:24:53 ================================================== ]
+ErrorMsg:Table 'lyf_server.role' doesn't exist
+------
+SQL:1146
+UPDATE role
+SET role_name = '开发用户', is_allow_login_backend = 1, is_disable = NULL
+WHERE role_id = '1'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.RoleApi.updateRole(RoleApi.java:117)
+
+[ ERROR - 2024-07-14 22:15:28 ================================================== ]
+ErrorMsg:Data truncation: Data too long for column 'permission_key' at row 1
+------
+SQL:1406
+UPDATE sys_menu
+SET menu_name = '是否允许登录后台', parent_menu_id = 10, menu_icon = '', url = '', type = '-1', permission_key = 'lyfsysPermissionKey-system_role_updateRoleIsAllowLoginBackend', is_show = '0'
+WHERE menu_id = '12'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.MenuApi.updateMenu(MenuApi.java:180)
+
+[ ERROR - 2024-07-14 22:15:31 ================================================== ]
+ErrorMsg:Data truncation: Data too long for column 'permission_key' at row 1
+------
+SQL:1406
+UPDATE sys_menu
+SET menu_name = '是否允许登录后台', parent_menu_id = 10, menu_icon = '', url = '', type = '-1', permission_key = 'lyfsysPermissionKey-system_role_updateRoleIsAllowLoginBackend', is_show = '0'
+WHERE menu_id = '12'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.MenuApi.updateMenu(MenuApi.java:180)
+

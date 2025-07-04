@@ -1,0 +1,26 @@
+=================== Error ===================
+Time:2023-10-27 19:44:27
+Message:null
+------
+lyf.system.common.SysUser.getBackendLogin(SysUser.java:66)
+lyf.system.api.SystemApi.isLogin(SystemApi.java:69)
+
+=================== Error ===================
+Time:2023-10-27 19:49:26
+Message:Index 1 out of bounds for length 1
+------
+lyf.system.common.SysUser.getFrontendLogin(SysUser.java:40)
+lyf.system.api.SystemApi.isLogin(SystemApi.java:71)
+
+=================== Error ===================
+Time:2023-10-27 19:52:49
+Message:Index 2 out of bounds for length 1
+------
+lyf.system.common.SysUser.getFrontendLogin(SysUser.java:40)
+lyf.system.api.SystemApi.isLogin(SystemApi.java:71)
+
+=================== Error ===================
+Time:2023-10-27 20:26:14
+Message:Required request body is missing: public void lyf.system.api.SystemApi.test(lyf.common.object.JSONMap)
+------
+

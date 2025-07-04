@@ -1,0 +1,10 @@
+[ ERROR - 2024-09-19 12:36:27 ================================================== ]
+ErrorMsg:Index 2 out of bounds for length 2
+------
+leaf.system.api.LogApi.getLog(LogApi.java:49)
+
+[ ERROR - 2024-09-19 12:37:27 ================================================== ]
+ErrorMsg:Index 2 out of bounds for length 2
+------
+leaf.system.api.LogApi.getLog(LogApi.java:50)
+

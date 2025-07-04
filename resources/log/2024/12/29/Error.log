@@ -1,0 +1,45 @@
+[ ERROR - 2024-12-29 13:12:25 ================================================== ]
+ErrorMsg:leaf.system.api.test
+------
+'leaf.system.api.test.temp'调用失败：没有找到类
+leaf.common.Clazz.invokeStatic(Clazz.java:84)
+leaf.common.Clazz.invokeStaticByMethodPath(Clazz.java:114)
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-12-29 13:12:25 ================================================== ]
+ErrorMsg:null
+------
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-12-29 13:12:27 ================================================== ]
+ErrorMsg:leaf.system.api.test
+------
+'leaf.system.api.test.temp'调用失败：没有找到类
+leaf.common.Clazz.invokeStatic(Clazz.java:84)
+leaf.common.Clazz.invokeStaticByMethodPath(Clazz.java:114)
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-12-29 13:12:27 ================================================== ]
+ErrorMsg:null
+------
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-12-29 13:13:19 ================================================== ]
+ErrorMsg:leaf.system.api.test.Test
+------
+'leaf.system.api.test.Test.temp'调用失败：没有找到类
+leaf.common.Clazz.invokeStatic(Clazz.java:84)
+leaf.common.Clazz.invokeStaticByMethodPath(Clazz.java:114)
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+
+[ ERROR - 2024-12-29 13:13:19 ================================================== ]
+ErrorMsg:null
+------
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:100)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+

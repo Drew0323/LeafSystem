@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>滑动拼图验证码</title>
+    <style type="text/css">
+        /* 拼图验证 */
+        .puzzle_valid {
+            width: 800px;
+            padding: 10px 20px;
+            border: 1px solid #eee;
+            transform-origin: left top;
+            border-radius: 3%;
+            /* 无法选中元素中的任何内容 */
+            transform-origin: left top;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        /* 图片容器块 */
+        .puzzle_valid > .img-con {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #eee;
+            border-radius: 1%;
+            position: relative;
+        }
+        /* 图片区域的滑块 */
+        .puzzle_valid > .img-con > .slide-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            z-index: 10;
+        }
+        /* 图片 */
+        .puzzle_valid > .img-con > .img {
+            width: 100%;
+            height: 100%;
+        }
+        /* 加载中样式 */
+        .puzzle_valid > .img-con > .loading {
+            width: unset;
+            height: unset;
+        }
+        /* 滑块容器 */
+        .puzzle_valid > .slide-con {
+            margin: 10px 0;
+            height: 80px;
+            position: relative;
+            border: 1px solid #eee;
+        }
+        /* 滑动按钮 */
+        .puzzle_valid > .slide-con > .slide-btn {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: #4C98F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: move;
+        }
+        /* 操作容器块 */
+        .puzzle_valid > .operate-con {
+            border-top: 1px solid #eee;
+            height: 30px;
+            padding: 5px 0 0 5px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 174, 255);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!-- 滑动拼图容器块 -->
+<div class="puzzle_valid">
+    <div class="img-con"><img class="img"><div class="slide-block"></div></div>
+    <div class="slide-con"><div class="slide-btn" style="color: white;font-size: 50px;">&gt;</div></div>
+    <div id="refresh" class="operate-con">[刷新]</div>
+</div>
+<!-- 验证码 -->
+<img id="valid_code" onclick="validCode()">
+<input type="text" id="valid_code_input"><button onclick="checkValidCode()">检查验证码</button>
+</body>
+<script src="lib/leaf-common/leaf-common.min.js"></script>
+<script type="text/javascript">
+    let refreshBtn = Dom.css('#refresh');//刷新按钮引用
+
+    init();
+    function init() {
+        Ajax.get({
+            url: '/system/api/getValidPuzzle',
+            success(data) {
+                if(data.IsSuccess == 1) {
+                    puzzleValidComponent({
+                        width: 800,//宽度（px）
+                        bigPicSrc: 'data:image/png;base64,'+data.data.big_image,//大图路径
+                        smallPicSrc: 'data:image/png;base64,'+data.data.small_image,//小图路径
+                        smallWidth: data.data.small_width,//小图宽度（px）
+                        smallHeight: data.data.small_height,//小图高度（px）
+                        loadingPicSrc: '/public/img/system/validate/loading.gif',//加载图片
+                        startY: data.data.y,//开始的y坐标
+                        async valid(x) {
+                            await Util.sleep(1500);
+                            console.log('滑动距离:'+x);
+                            Ajax.get({
+                                url: '/system/api/checkValidPuzzle',
+                                param: {
+                                    ValidParam: data.data.valid_param,
+                                    X: x
+                                },
+                                success: function(_data) {
+                                    if(_data.IsSuccess === '1') {
+                                        alert('验证成功');
+                                        init();
+                                    } else {
+                                        alert(_data.Msg);
+                                    }
+                                },
+                                async: false
+                            });
+                        }
+                    });
+                } else {
+                    alert('获取验证图片失败');
+                }
+            }
+        });
+    }
+    /**
+     * 拼图验证组件
+     */
+    async function puzzleValidComponent(obj) {
+        let hasLoadingPic = false;
+        let loadingImg = new Image();
+        if(obj.loadingPicSrc != null) {
+            loadingImg.src = obj.loadingPicSrc;//加载图片
+            hasLoadingPic = true;
+        }
+        let slideValid = document.querySelector('.puzzle_valid');
+        let imgCon = document.querySelector('.puzzle_valid > .img-con');//图片容器元素引用
+        let img = document.querySelector('.puzzle_valid > .img-con > .img');//图片元素引用
+        let slideBlock = document.querySelector('.puzzle_valid > .img-con > .slide-block');//滑块元素引用
+        let slideBtn = document.querySelector('.puzzle_valid > .slide-con > .slide-btn');//滑块按钮引用
+        slideBlock.style.width = `${obj.smallWidth}px`;
+        slideBlock.style.height = `${obj.smallHeight}px`;
+        slideBlock.style["background-size"] = `${obj.smallWidth}px ${obj.smallHeight}px`;
+        slideBlock.style["background-image"] = `url(${obj.smallPicSrc})`;//拼图背景
+        let multiple = obj.width/800;//放大缩小倍数
+        slideValid.style.transform = 'scale('+multiple+')';
+        slideBlock.style.display = "none";//不显示拼图
+        if(hasLoadingPic) img.src = loadingImg.src;//加载动画
+        let tmp = new Image();//隐式加载图片
+        tmp.src = obj.bigPicSrc;
+        tmp.onload = function() {
+            img.classList.remove("loading"); // 撤销loading
+            img.src =  tmp.src;//指定src 此时从缓存加载图片
+            //初始化滑块
+            slideBlock.style.top=(obj.startY/multiple) * (obj.width / 800) +'px';//拼图Y轴偏移
+            //PC端滑块事件
+            slideBtn.addEventListener('mousedown', function(e) {
+                // console.log('PC端开始滑动。。。');
+                slideBlock.style.display = 'block';
+                let edgeX = e.clientX;//鼠标点击位置
+
+                document.onmousemove = event => {
+                    let relativeX = event.clientX - edgeX;//鼠标移动距离
+                    if(relativeX<0 || relativeX>imgCon.offsetWidth-this.offsetWidth) return void 0;//判断是否超出滑动容器块 超出则不移动
+                    slideBlock.style.left = relativeX/multiple + "px";//移动拼图
+                    this.style.left =  relativeX/multiple + "px";//移动滑块按钮
+                };
+
+                document.onmouseup = async function() {
+                    this.onmousemove = null;//撤销事件
+                    this.onmouseup = null;//撤销事件
+                    if(hasLoadingPic) slideBtn.innerHTML = '<img src='+loadingImg.src+'>';
+                    await obj.valid(slideBlock.offsetLeft);
+                    if(hasLoadingPic) slideBtn.innerHTML = '&gt;';
+                    slideBlock.style.left = 0;//拼图归位
+                    slideBtn.style.left =  0;//滑块按钮归位
+                };
+            });
+            //移动端滑块事件
+            slideBtn.addEventListener('touchstart', function(e) {
+                // console.log('移动端开始滑动。。。');
+                slideBlock.style.display = 'block';
+                let edgeX = e.touches[0].clientX;//触摸开始位置
+
+                document.ontouchmove = event => {
+                    let relativeX = event.touches[0].clientX - edgeX;//触摸移动距离
+
+                    if(relativeX < 0 || relativeX > imgCon.offsetWidth - this.offsetWidth) return void 0;//判断是否超出滑动容器块 超出则不移动
+
+                    slideBlock.style.left = relativeX/multiple + "px";//移动拼图
+                    this.style.left =  relativeX/multiple + "px";//移动滑块按钮
+                };
+
+                document.ontouchend = async function() {
+                    document.ontouchmove = null;//撤销事件
+                    document.ontouchend = null;//撤销事件
+                    if(hasLoadingPic) slideBtn.innerHTML = '<img src='+loadingImg.src+'>';
+                    await obj.valid(slideBlock.offsetLeft);
+                    if(hasLoadingPic) slideBtn.innerHTML = '&gt;';
+                    slideBlock.style.left = 0;//拼图归位
+                    slideBtn.style.left =  0;//滑块按钮归位
+                };
+            });
+        }
+    }
+    refreshBtn.addEventListener("click", e => init());//刷新按钮绑定事件
+
+    //验证码
+    let validParam = '';
+    let validCodeInput = Dom.id('valid_code_input');
+    function validCode() {
+        Ajax.get({
+            url: '/system/api/getValidCode',
+            param: {
+                Length: 6
+            },
+            success(data) {
+                let img = Dom.id('valid_code');
+                img.setAttribute('src','data:image/png;base64,'+data.data.img);
+                validParam = data.data.valid_param;
+            }
+        });
+    }
+    function checkValidCode() {
+        Ajax.get({
+            url: '/system/api/checkValidCode',
+            param: {
+                ValidParam: validParam,
+                Text: validCodeInput.value
+            },
+            success(data) {
+                if(data.IsSuccess == 1) {
+                    alert('验证成功');
+                    validCode();
+                } else {
+                    alert(data.Msg);
+                }
+            }
+        });
+    }
+    validCode();
+</script>
+</html>

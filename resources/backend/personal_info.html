@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>个人信息</title>
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap3.3.7.min.css">
+<link rel="stylesheet" href="../lib/materialdesignicons.min.css">
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.ui.css">
+</head>
+<body>
+<div class="card">
+    <div class="card-body">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#tab-base" role="tab" data-toggle="tab">基本信息</a></li>
+            <li><a href="#tab-change-pwd" role="tab" data-toggle="tab">修改密码</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-base">
+                <div class="edit-avatar">
+                    <img src="../public/img/system/default_avatar.jpg" alt="..." class="img-avatar leafsys-user-avatar">
+                    <div class="avatar-divider"></div>
+                    <div class="edit-avatar-content">
+                        <button class="btn btn-default">修改头像</button>
+                        <p class="m-0">选择一张你喜欢的图片，裁剪后会自动生成264x264大小，上传图片大小不能超过2M。</p>
+                    </div>
+                </div>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        账号<input type="text" class="form-control leafsys-user-account" disabled/>
+                    </div>
+                    <div class="form-group">
+                        用户名<input type="text" class="form-control leafsys-user-name" disabled/>
+                        <small class="form-text text-muted">用户名不能超过20个字符</small>
+                    </div>
+                    <div class="form-group">
+                        个性签名<textarea class="form-control leafsys-user-personal_signature" rows="3" disabled></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" disabled>保存</button>
+                </form>
+            </div>
+            <div class="tab-pane" id="tab-change-pwd">
+                <form method="post" action="#!" class="site-form">
+                    <div class="form-group">
+                        <label for="old-password">旧密码</label>
+                        <input type="password" class="form-control" name="oldpwd" id="old-password" placeholder="输入账号的原登录密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">新密码</label>
+                        <input type="password" class="form-control" name="newpwd" id="new-password" placeholder="输入新的密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">确认新密码</label>
+                        <input type="password" class="form-control" name="confirmpwd" id="confirm-password" placeholder="再次输入新的密码">
+                    </div>
+                    <button type="button" class="btn btn-primary" disabled>修改密码</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-3.1.0.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap3.3.7.min.js"></script>
+<script src="../lib/leaf-common/leaf-common.min.js"></script>
+<script>
+    Ajax.get({
+        url: '/system/api/user/isLogin',
+        param: {
+            IsBackend: 1
+        },
+        success(data) {
+            if(data.IsSuccess === '1') {
+                console.log(data.data)
+                Dom.css('.leafsys-user-account').value = data.data.account;
+                Dom.css('.leafsys-user-name').value = data.data.name;
+                Dom.css('.leafsys-user-personal_signature').innerText =  data.data.personal_signature;
+
+                if(data.data.avatar != null && data.data.avatar != '') {
+                    Dom.css('.leafsys-user-avatar').setAttribute('src', data.data.avatar);
+                }
+            } else {
+                location.href = './login.html';
+            }
+        }
+    });
+</script>
+</html>

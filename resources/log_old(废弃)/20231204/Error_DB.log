@@ -1,0 +1,11 @@
+=================== Error ===================
+Time:2023-12-04 15:16:16
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by a.sort desc' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_menu b on a.parent_menu_id = b.parent_menu_idorder by a.sort desc
+------
+lyf.common.DB.query(DB.java:141)
+lyf.common.object.SQLWhere.sqlToJSONMap(SQL.java:64)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:51)
+

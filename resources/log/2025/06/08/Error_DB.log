@@ -1,0 +1,15 @@
+[ ERROR - 2025-06-08 22:14:10 ================================================== ]
+ErrorMsg:Column 'sex' cannot be null
+------
+SQL:1048
+INSERT INTO sys_user (name, account, password, personal_signature, avatar
+	, birthday, phone, email, real_name, idcard
+	, sex, is_disable)
+VALUES ('test09', 'test09', '123', '', ''
+	, NULL, '', '', '', ''
+	, NULL, NULL);
+SELECT @new_user_id := last_insert_id()
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysUserApi.updateUser(SysUserApi.java:527)
+

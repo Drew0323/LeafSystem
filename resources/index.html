@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP接口测试</title>
+    <style>
+        html,body {height: 100%;}
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        li {
+            padding: 15px;
+            border-bottom: 1px solid gray;
+            color: gray;
+            font-size: 15px;
+        }
+        li:hover {
+            color: white;
+        }
+        a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 250px;height: 100%;position: fixed;top: 0;left: 0;background-color: rgb(19,1,1)">
+    <br><h1 align="center" style="color: white">接口列表</h1><br><ul id="list"></ul>
+    <ul>
+        <li><a href="./backend/index">后台</a></li>
+        <li><a href="./common.html">common</a></li>
+        <li><a href="./validRobot.html">人机验证</a></li>
+    </ul>
+</div>
+
+<form id="apiForm" style="margin: 25px 300px;width: calc(100% - 300px)">
+    <input type="text" id="urlInput" name="url" autocomplete="off" required style="width:95%;height: 30px"><br><br>
+    <label for="methodSelect">请求方法:</label>
+    <select id="methodSelect" name="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+    </select>&emsp;
+    <label for="paramTypeSelect">参数类型:</label>
+    <select id="paramTypeSelect" name="paramType">
+        <option value="1">普通参数</option>
+        <option value="2">JSON</option>
+    </select>&emsp;
+    <button type="submit">发送请求</button><br><br>
+    请求参数<br><textarea id="paramInput" placeholder="在这里输入参数" style="width: 95%;height: 200px;padding: 10px"></textarea><br>
+    响应<br><textarea id="result" readonly style="width: 95%;height: 500px"></textarea>
+</form>
+</body>
+<script src="lib/leaf-common/leaf-common.min.js"></script>
+<script>
+    let url = document.getElementById("urlInput");
+    let method = document.getElementById("methodSelect");
+    let paramType = document.getElementById("paramTypeSelect");
+    let paramInput = document.getElementById("paramInput");
+    let resultArea = document.getElementById("result");
+    let apiData;
+    function init(no) {
+        url.value = apiData[no].url;
+        method.value = apiData[no].method;
+        paramType.value = apiData[no].paramType;
+        paramInput.innerHTML = apiData[no].requestData;
+        resultArea.innerHTML = '';
+    }
+    fetch('./apiData.json').then(response => response.text()).then(data => {
+        apiData = eval("("+data+")");
+        init(0);
+        for(let i = 0;i < apiData.length;i++) {
+            let li = document.createElement('li');
+            li.addEventListener('click',function() {
+                let lis = document.querySelectorAll('#list li');
+                for(let j = 0;j < lis.length;j++) {
+                    lis[j].style.backgroundColor = null;
+                }
+                li.style.backgroundColor = 'orange';
+                init(i);
+            });
+            li.innerHTML = apiData[i].name;
+            document.querySelector("ul").append(li);
+        }
+        document.querySelector('ul li').style.backgroundColor = 'orange';
+    });
+    document.getElementById('apiForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // 阻止表单默认提交行为
+        if(method.value === "GET") {
+            Ajax.get({
+                url: url.value+"?"+paramInput.value,
+                success(data,xhr) {
+                    resultArea.innerHTML = JSON.stringify(JSON.parse(data),null,"\t");
+                    console.log('请求成功，响应状态码为 ' + xhr.status);
+                },
+                async: false
+            });
+            // fetch(url.value+"?"+paramInput.value,{method:"GET"}).then((data) => {return data.text();})
+            // .then((result) => {
+            //     resultArea.innerHTML = JSON.stringify(JSON.parse(result),null,"\t");
+            // });
+        } else if(method.value === "POST") {
+            let headers = {};
+
+            if(paramType.value === "1") {
+                headers = {"Content-Type": "application/x-www-form-urlencoded"};
+            } else if(paramType.value === "2") {
+                headers = {"Content-Type": "application/json"};
+            }
+
+            fetch(url.value,{method:"POST",headers:headers,body:paramInput.value}).then((data) => {return data.text();})
+            .then((result) => {
+                resultArea.innerHTML = JSON.stringify(JSON.parse(result),null,"\t");
+            });
+        }
+    });
+</script>
+</html>

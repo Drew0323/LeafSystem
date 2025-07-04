@@ -1,0 +1,103 @@
+=================== Error ===================
+Time:2023-11-25 01:50:18
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:51:02
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:51:37
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:52:05
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:52:26
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:52:37
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort desc' at line 1
+------
+SQL:1064
+select menu_id,parent_menu_id,menu_name,menu_icon,url,target_type,is_show,sort from sys_menu order sort desc
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemMenuApi.getMenuList(SystemMenuApi.java:20)
+
+=================== Error ===================
+Time:2023-11-25 01:58:46
+Message:Table 'lyf_server.menu' doesn't exist
+------
+SQL:1146
+SELECT sort
+FROM menu
+WHERE menu_id = '1'
+------
+lyf.common.DB.query(DB.java:132)
+lyf.common.DB.queryFirst(DB.java:160)
+lyf.system.api.SystemMenuApi.sort(SystemMenuApi.java:40)
+
+=================== Error ===================
+Time:2023-11-25 19:25:44
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort <= '2';update sys_menu set sort = sort + 1 where menu_id = '2'' at line 1
+------
+SQL:1064
+update sys_menu set sort = sort - 1 where sort > '1' sort <= '2';update sys_menu set sort = sort + 1 where menu_id = '2'
+------
+lyf.common.DB.update(DB.java:195)
+lyf.system.api.SystemMenuApi.sort(SystemMenuApi.java:74)
+
+=================== Error ===================
+Time:2023-11-25 19:26:00
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort <= '3';update sys_menu set sort = sort + 1 where menu_id = '3'' at line 1
+------
+SQL:1064
+update sys_menu set sort = sort - 1 where sort > '2' sort <= '3';update sys_menu set sort = sort + 1 where menu_id = '3'
+------
+lyf.common.DB.update(DB.java:195)
+lyf.system.api.SystemMenuApi.sort(SystemMenuApi.java:74)
+
+=================== Error ===================
+Time:2023-11-25 19:26:02
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sort <= '3';update sys_menu set sort = sort + 1 where menu_id = '3'' at line 1
+------
+SQL:1064
+update sys_menu set sort = sort - 1 where sort > '2' sort <= '3';update sys_menu set sort = sort + 1 where menu_id = '3'
+------
+lyf.common.DB.update(DB.java:195)
+lyf.system.api.SystemMenuApi.sort(SystemMenuApi.java:74)
+

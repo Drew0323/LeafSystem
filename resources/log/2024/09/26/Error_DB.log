@@ -1,0 +1,37 @@
+[ ERROR - 2024-09-26 17:07:14 ================================================== ]
+ErrorMsg:Column 'is_disable' in field list is ambiguous
+------
+SQL:1052
+SELECT a.user_id, name, account, password, personal_signature
+	, avatar, birthday, phone, email, real_name
+	, idcard, sex, is_disable, login_ip, login_time
+	, c.role_id, c.role_name
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+ORDER BY a.user_id DESC
+LIMIT 0, 10
+------
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.sqlToJSONMap(DB.java:436)
+leaf.common.DB.sqlToJSONMap(DB.java:397)
+leaf.system.api.UserApi.getUserList(UserApi.java:214)
+
+[ ERROR - 2024-09-26 17:09:06 ================================================== ]
+ErrorMsg:Unknown column 'c.role_id' in 'field list'
+------
+SQL:1054
+SELECT a.user_id, name, account, password, personal_signature
+	, avatar, birthday, phone, email, real_name
+	, idcard, sex, is_disable, login_ip, login_time
+	, c.role_id, c.role_name
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+ORDER BY a.user_id DESC
+LIMIT 0, 10
+------
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.sqlToJSONMap(DB.java:436)
+leaf.common.DB.sqlToJSONMap(DB.java:397)
+leaf.system.api.UserApi.getUserList(UserApi.java:213)
+

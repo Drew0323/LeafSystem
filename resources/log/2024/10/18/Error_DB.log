@@ -1,0 +1,11 @@
+[ ERROR - 2024-10-18 21:53:19 ================================================== ]
+ErrorMsg:Duplicate entry '0007' for key 'test_student.unique_no'
+------
+SQL:1062
+INSERT INTO test_student (name, user_id, stuNo, class)
+VALUES ('test011', '2', '0007', '计算机科学与技术2208')
+------
+leaf.common.DB.update(DB.java:197)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:110)
+leaf.system.filter.ApiGlobalFilter.doFilter(ApiGlobalFilter.java:37)
+

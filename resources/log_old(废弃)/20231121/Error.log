@@ -1,0 +1,6 @@
+=================== Error ===================
+Time:2023-11-21 20:36:56
+Message:/ by zero
+------
+lyf.system.api.TestApi.demo01(TestApi.java:16)
+

@@ -1,0 +1,84 @@
+[ ERROR - 2025-06-19 11:23:21 ================================================== ]
+ErrorMsg:Duplicate entry 'admin' for key 'sys_user.unique_account'
+------
+SQL:1062
+UPDATE sys_user
+SET name = 'admin', account = 'admin', password = 'admin', personal_signature = '', avatar = '', birthday = NULL, phone = '', email = '', real_name = '', idcard = '', sex = 2, is_disable = NULL, login_time = '2025-04-22 22:12:21'
+WHERE user_id = '3';
+DELETE FROM sys_user_role_rel
+WHERE user_id = '3';
+INSERT INTO sys_user_role_rel (user_id, role_id)
+VALUES ('3', '2');
+INSERT INTO sys_user_role_rel (user_id, role_id)
+VALUES ('3', '3')
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysUserApi.updateUser(SysUserApi.java:479)
+
+[ ERROR - 2025-06-19 11:31:14 ================================================== ]
+ErrorMsg:Data truncation: Incorrect datetime value: '' for column 'login_time' at row 1
+------
+SQL:1292
+UPDATE sys_user
+SET name = '运维', account = '运维', password = '123', personal_signature = '', avatar = '', birthday = NULL, phone = '', email = '', real_name = '', idcard = '', sex = 2, is_disable = NULL, login_time = ''
+WHERE user_id = '4';
+DELETE FROM sys_user_role_rel
+WHERE user_id = '4'
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysUserApi.updateUser(SysUserApi.java:479)
+
+[ ERROR - 2025-06-19 15:41:44 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c o' at line 1
+------
+SQL:1064
+select a.name,a.account,a.personal_signature,a.avatar,a.phone,a.email,a.sex,a.is_disable,c.role_id,c.role_name from sys_user a where a.user_id = '2'    left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id 
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:148)
+
+[ ERROR - 2025-06-19 15:42:05 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c o' at line 1
+------
+SQL:1064
+select a.name,a.account,a.personal_signature,a.avatar,a.phone,a.email,a.sex,a.is_disable,c.role_id,c.role_name from sys_user a where a.user_id = '2'    left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id 
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:148)
+
+[ ERROR - 2025-06-19 15:42:43 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c o' at line 1
+------
+SQL:1064
+select a.name,a.account,a.personal_signature,a.avatar,a.phone,a.email,a.sex,a.is_disable,c.role_id,c.role_name from sys_user a where a.user_id = '2'    left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id 
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:148)
+
+[ ERROR - 2025-06-19 15:43:44 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c o' at line 1
+------
+SQL:1064
+select a.name,a.account,a.personal_signature,a.avatar,a.phone,a.email,a.sex,a.is_disable,c.role_id,c.role_name from sys_user a where a.user_id = '2'    left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id 
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:148)
+
+[ ERROR - 2025-06-19 15:44:06 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c o' at line 1
+------
+SQL:1064
+select a.name,a.account,a.personal_signature,a.avatar,a.phone,a.email,a.sex,a.is_disable,c.role_id,c.role_name from sys_user a where a.user_id = '2'    left join sys_user_role_rel b on a.user_id = b.user_id    left join sys_role c on b.role_id = c.role_id 
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:148)
+
+[ ERROR - 2025-06-19 16:11:34 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by sort desc' at line 1
+------
+SQL:1064
+select distinct a.menu_id,a.menu_name,a.parent_menu_id,a.menu_icon,a.url,a.type from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where is_show = 1 and type > 0 and b.role_id in () order by sort desc
+------
+leaf.common.DB.query(DB.java:151)
+leaf.system.api.SysMenuApi.getMenuTree(SysMenuApi.java:45)
+

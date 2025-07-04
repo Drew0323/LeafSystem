@@ -1,0 +1,32 @@
+=================== Error ===================
+Time:2023-11-06 16:46:06
+Message:null
+------
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:199)
+
+=================== Error ===================
+Time:2023-11-06 16:46:08
+Message:null
+------
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:199)
+
+=================== Error ===================
+Time:2023-11-06 16:49:06
+Message:null
+------
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:202)
+
+=================== Error ===================
+Time:2023-11-06 16:54:48
+Message:Can't read input file!
+------
+lyf.common.util.Valid.createPuzzleValid(Valid.java:182)
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:200)
+
+=================== Error ===================
+Time:2023-11-06 16:59:29
+Message:class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+------
+lyf.common.object.JSONMap.getString(JSONMap.java:118)
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:207)
+

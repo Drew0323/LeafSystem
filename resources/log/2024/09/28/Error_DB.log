@@ -1,0 +1,58 @@
+[ ERROR - 2024-09-28 11:34:18 ================================================== ]
+ErrorMsg:Column 'is_disable' in field list is ambiguous
+------
+SQL:1052
+SELECT a.user_id, name, account, password, personal_signature
+	, avatar, birthday, phone, email, real_name
+	, idcard, sex, is_disable, login_ip, login_time
+	, c.role_id, c.role_name
+FROM (SELECT user_id, name, account, password, personal_signature
+		, avatar, birthday, phone, email, real_name
+		, idcard, sex, is_disable, login_ip, login_time
+	FROM sys_user
+	LIMIT 0, 10
+	) a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+ORDER BY a.user_id DESC
+------
+leaf.common.DB.query(DB.java:146)
+leaf.system.api.UserApi.getUserList(UserApi.java:309)
+
+[ ERROR - 2024-09-28 12:23:47 ================================================== ]
+ErrorMsg:Column 'user_id' in where clause is ambiguous
+------
+SQL:1052
+SELECT a.user_id, c.role_id, c.role_name
+FROM sys_user a
+	INNER JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+WHERE user_id IN (5, 4, 3, 2, 1)
+------
+leaf.common.DB.query(DB.java:146)
+leaf.system.api.UserApi.getUserListDeprecated(UserApi.java:230)
+
+[ ERROR - 2024-09-28 12:42:57 ================================================== ]
+ErrorMsg:Table 'lyf_server.config' doesn't exist
+------
+SQL:1146
+SELECT COUNT(1) AS 'count'
+FROM config
+------
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.queryFirst(DB.java:161)
+leaf.common.DB.queryFirstField(DB.java:173)
+leaf.system.api.ConfigApi.getSystemConfigList(ConfigApi.java:129)
+
+[ ERROR - 2024-09-28 12:43:03 ================================================== ]
+ErrorMsg:Table 'lyf_server.config' doesn't exist
+------
+SQL:1146
+SELECT COUNT(1) AS 'count'
+FROM config
+------
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.queryFirst(DB.java:161)
+leaf.common.DB.queryFirstField(DB.java:173)
+leaf.system.api.ConfigApi.getSystemConfigList(ConfigApi.java:129)
+

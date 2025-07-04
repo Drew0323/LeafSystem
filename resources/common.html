@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initital-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <a href="/api/demo01">/api/demo01</a><br>
+    <a href="/api/demo02">/api/demo02</a><br>
+    <a href="/api/demo03">/api/demo03</a><br>
+    <a href="/api/demo04">/api/demo04</a><br>
+    <a href="/api/demo05">/api/demo05</a><br>
+    <input type="file"><br>
+    是否使用原始名称 <input type="radio" name="isOldName" value="0">否<input type="radio" name="isOldName" value="1">是<br>
+    是否使用分段上传 <input type="radio" name="isUploadPart" value="0">否<input type="radio" name="isUploadPart" value="1">是<br>
+    <span id="schedule">0%</span><br>
+    <button onclick="upload()">上传文件</button><br>
+    <button onclick="download()">下载图片</button>
+</body>
+<script src="lib/vconsole.min.js"></script>
+<script src="lib/leaf-common/leaf-common.min.js"></script>
+<script>
+    new VConsole();
+    let file = Dom.css('input[type=file]');
+    let timestamp = Date.now();
+    let fileSize = 0;
+    let filePartSize = 1024 * 1024 * 5;
+    let currentIndex = 0;
+    let totalIndex = 0;
+
+    function upload() {
+        if(Dom.getRadioChecked('isUploadPart') == '1') {
+            timestamp = Date.now();
+            fileSize = file.files[0].size;
+            currentIndex = 0;
+            totalIndex = Math.ceil(fileSize / filePartSize);
+            uploadPart();
+            return;
+        }
+        let checkValue = Dom.getRadioChecked('isOldName');
+        Ajax.post({
+            url: '/system/api/upload',
+            param: {
+                File: file.files[0],
+                IsOldName: checkValue == null ? '' : checkValue,
+            },
+            success(data, xhr) {
+                if(data.IsSuccess == 1) {
+                    alert('上传成功');
+                    console.log(data.data);
+                } else {
+                    alert('上传失败');
+                }
+            }
+        });
+    }
+    function uploadPart() {
+        Ajax.post({
+            url: '/api/uploadPart',
+            param: {
+                File: file.files[0].slice(currentIndex * filePartSize,(currentIndex + 1) * filePartSize),
+                CurrentIndex: currentIndex,
+                TotalIndex: totalIndex,
+                Filename: file.files[0].name,
+                Identifying: timestamp
+            },
+            success(data, xhr) {
+                if(data.IsSuccess == 1) {
+                    console.log(data.data);
+                    if(currentIndex < totalIndex - 1) {
+                        currentIndex++;
+                        uploadPart();
+                    } else {
+                        Dom.id('schedule').innerHTML = '100%';
+                        alert('上传完成');
+                    }
+                    Dom.id('schedule').innerHTML = (currentIndex / totalIndex * 100) + '%';
+                } else {
+                    alert('上传失败');
+                }
+            }
+        });
+    }
+    console.log('================ 请求前 ================');
+    Ajax.request({
+        url: '/demo01',
+        method: 'get',
+        param: {
+            user_name: 'zhangsan',
+            sex: '男'
+        },
+        success(data,xhr) {
+            console.log('第1个请求成功，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        error(data,xhr) {
+            console.log('请求失败，响应状态：'+xhr.status);
+            console.log(data);
+        }
+    });//异步请求
+    Ajax.request({
+        url: '/demo01',
+        method: 'post',
+        param: {
+            user_name: 'lisi',
+            sex: '男'
+        },
+        success(data,xhr) {
+            console.log('第2个请求成功，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        error(data,xhr) {
+            console.log('请求失败，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        async: false
+    });//同步请求
+    Ajax.get({
+        url: '/demo01',
+        param: {
+            user_name: 'wangwu',
+            sex: '男'
+        },
+        header: {
+            isShowAllHeader : 'true',
+        },
+        success(data,xhr) {
+            console.log('第3个请求成功，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        error(data,xhr) {
+            console.log('第3个请求失败，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        async: false
+    });
+    Ajax.post({
+        url: '/demo01',
+        param: {
+            user_name: 'xiaoming',
+            sex: '男'
+        },
+        success(data,xhr) {
+            console.log('第4个请求成功，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        error(data,xhr) {
+            console.log('请求失败，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        async: false
+    });
+    Ajax.post({
+        url: '/demo02',
+        param: {
+            name: 'xiaoming',
+            sex: '男'
+        },
+        header: {
+            'Content-Type': 'application/json'
+        },
+        success(data,xhr) {
+            console.log('第4个请求成功，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        error(data,xhr) {
+            console.log('请求失败，响应状态：'+xhr.status);
+            console.log(data);
+        },
+        async: false
+    });
+    console.log('================ 请求后 ================');
+    function download() {
+        Util.downloadFile('/upload/system/20231030/jpg-14_10_54_561-85472239.jpg','test.jpg',function(xhr) {
+            if(xhr.status == 404) {
+                alert('文件不存在');
+            }
+        },true);
+    }
+</script>
+</html>

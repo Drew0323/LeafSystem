@@ -1,0 +1,26 @@
+=================== Error ===================
+Time:2023-11-08 13:51:07
+Message:Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+------
+
+=================== Error ===================
+Time:2023-11-08 13:54:40
+Message:Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+------
+
+=================== Error ===================
+Time:2023-11-08 17:41:34
+Message:Coordinate out of bounds!
+------
+lyf.common.util.Valid.cutByTemplate(Valid.java:262)
+lyf.common.util.Valid.createPuzzleValid(Valid.java:189)
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:201)
+
+=================== Error ===================
+Time:2023-11-08 17:43:26
+Message:Coordinate out of bounds!
+------
+lyf.common.util.Valid.cutByTemplate(Valid.java:262)
+lyf.common.util.Valid.createPuzzleValid(Valid.java:189)
+lyf.system.api.SystemApi.getPuzzleValid(SystemApi.java:201)
+

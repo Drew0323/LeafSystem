@@ -1,0 +1,13 @@
+[ ERROR - 2024-01-12 11:33:21 ================================================== ]
+ErrorMsg:Data truncation: Data too long for column 'url' at row 1
+------
+SQL:1406
+UPDATE sys_menu
+SET menu_name = '22', parent_menu_id = 5, menu_icon = '', url = 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E5%BD%AD%E4%BA%8E%E6%99%8F&fenlei=256&rsv_pq=0xde3a52f800046d55&rsv_t=d34cGPtdBm%2FOqAcsUS%2F7GTk88OSL0ZTiLhLYBNy19e0Ji9eR2Flg5Bkml159&rqlang=en&rsv_enter=1&rsv_dl=tb&rsv_sug3=5&rsv_sug1=4&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&inputT=1288&rsv_sug4=1891', type = '4', is_show = '1'
+WHERE menu_id = '6'
+------
+lyf.common.DB.update(DB.java:218)
+lyf.system.api.SystemMenuApi.updateMenu(SystemMenuApi.java:149)
+lyf.system.api.SystemMenuApi$$FastClassBySpringCGLIB$$6f21cfee.invoke(<generated>:-1)
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$fdb625fb.updateMenu(<generated>:-1)
+

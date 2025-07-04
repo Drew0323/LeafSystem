@@ -1,0 +1,14 @@
+=================== Error ===================
+Time:2023-10-30 13:43:02
+Message:Table 'study.sys_config' doesn't exist
+------
+SQL:1146
+SELECT config_key, config_value
+FROM sys_config
+WHERE config_key = 'AllowUploadFileSize'
+	OR config_key = 'AllowUploadFileSuffix'
+------
+lyf.common.DB.query(DB.java:111)
+lyf.system.common.SysCommon.getSystemConfig(SystemCommon.java:36)
+lyf.system.api.SystemApi.upload(SystemApi.java:112)
+

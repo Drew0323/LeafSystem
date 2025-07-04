@@ -1,0 +1,33 @@
+[
+  {
+    "name": "用户/获取列表",
+    "url": "/system/api/user/getList",
+    "method": "GET",
+    "paramType": "1",
+    "requestData": "user_id=\n&name=\n&user_group_id=\n&SortField=\n&SortOrder=\n&PageNo=\n&PageMaxCount="
+  },{
+    "name": "用户/登录",
+    "url": "/system/api/user/login",
+    "method": "POST",
+    "paramType": "1",
+    "requestData": "account=刘宇枫&password=lyf123456&IsBackend=&IsSaveLoginStatus="
+  },{
+  "name": "用户/退出登录",
+  "url": "/system/api/user/logout",
+  "method": "GET",
+  "paramType": "1",
+  "requestData": "IsBackend="
+},{
+  "name": "用户/是否登录",
+  "url": "/system/api/user/isLogin",
+  "method": "GET",
+  "paramType": "1",
+  "requestData": "IsBackend=1"
+},{
+  "name": "获取系统配置",
+  "url": "/system/api/systemConfig/getSystemConfig",
+  "method": "GET",
+  "paramType": "1",
+  "requestData": "ConfigKeys=SystemName,AllowBackendLoginUserGroupId,AllowUploadFileSize,AllowUploadFileSuffix"
+}
+]

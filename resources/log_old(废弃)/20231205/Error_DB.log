@@ -1,0 +1,32 @@
+=================== Error ===================
+Time:2023-12-05 18:56:13
+Message:Incorrect integer value: '' for column 'parent_menu_id' at row 1
+------
+SQL:1366
+UPDATE sys_menu
+SET menu_name = '333', parent_menu_id = '', menu_icon = '', url = '', type = '1', is_show = 1
+WHERE menu_id = '8'
+------
+lyf.common.DB.update(DB.java:202)
+lyf.system.api.SystemMenuApi.updateMenu(SystemMenuApi.java:73)
+
+=================== Error ===================
+Time:2023-12-05 19:01:04
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',parent_menu_id = ''   type = '1',is_show = 1 where menu_id = '11'' at line 1
+------
+SQL:1064
+update sys_menu set menu_name = '4444',menu_icon = '',url = '',,parent_menu_id = ''   type = '1',is_show = 1 where menu_id = '11'
+------
+lyf.common.DB.update(DB.java:202)
+lyf.system.api.SystemMenuApi.updateMenu(SystemMenuApi.java:88)
+
+=================== Error ===================
+Time:2023-12-05 19:03:29
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1',is_show = 1',parent_menu_id = null where menu_id = '11'' at line 1
+------
+SQL:1064
+update sys_menu set menu_name = '4444',menu_icon = '',url = ',type = '1',is_show = 1',parent_menu_id = null where menu_id = '11'
+------
+lyf.common.DB.update(DB.java:202)
+lyf.system.api.SystemMenuApi.updateMenu(SystemMenuApi.java:86)
+

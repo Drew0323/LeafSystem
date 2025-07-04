@@ -1,0 +1,627 @@
+[ ERROR - 2025-04-09 13:42:31 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () an' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:42:31 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+
+[ ERROR - 2025-04-09 13:42:31 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () a' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:42:31 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+
+[ ERROR - 2025-04-09 13:43:05 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:05 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:07 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '20' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:07 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '20'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:09 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:09 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:12 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:12 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '3'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:15 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:15 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '3'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:20 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:20 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:21 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '17' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:43:21 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '17'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:43:21 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( role_id = '2' )' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_rolewhere ( role_id = '2' )
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.system.api.SysRoleApi.getRoleList(SysRoleApi.java:77)
+
+[ ERROR - 2025-04-09 13:43:21 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_rolewhere(role_id = '2')
+
+[ ERROR - 2025-04-09 13:46:10 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:10 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:11 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( role_id = '2' )' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_rolewhere ( role_id = '2' )
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.system.api.SysRoleApi.getRoleList(SysRoleApi.java:77)
+
+[ ERROR - 2025-04-09 13:46:11 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '17' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:11 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_rolewhere(role_id = '2')
+
+[ ERROR - 2025-04-09 13:46:11 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '17'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:15 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '20' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:15 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '20'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:15 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:15 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:16 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:16 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '3'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:17 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '27' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:17 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '27'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:21 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:21 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:22 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '17' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:22 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '17'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:23 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '20' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:23 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '20'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:25 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:25 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '3'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:27 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '3' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:27 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '3'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:31 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '20' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:31 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '20'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:31 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '10' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:31 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '10'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:33 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and  !isnull(permission_key) and permission_key != ''' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where a.menu_id = '' and a.parent_menu_id = '17' and a.type = '' and b.role_id in () and  !isnull(permission_key) and permission_key != ''
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.common.DB.sqlToJSONMap(DB.java:393)
+leaf.system.api.SysRoleApi.getRoleMenuPermissionKeyList(SysRoleApi.java:277)
+
+[ ERROR - 2025-04-09 13:46:33 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+WHERE a.menu_id = ''
+	AND a.parent_menu_id = '17'
+	AND a.type = ''
+	AND b.role_id IN ()
+	AND !(isnull(permission_key)
+	AND permission_key != '')
+
+[ ERROR - 2025-04-09 13:46:33 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( role_id = '2' )' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_rolewhere ( role_id = '2' )
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.system.api.SysRoleApi.getRoleList(SysRoleApi.java:77)
+
+[ ERROR - 2025-04-09 13:46:33 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_rolewhere(role_id = '2')
+
+[ ERROR - 2025-04-09 13:51:15 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '( role_id = '2' )' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_rolewhere ( role_id = '2' )
+------
+leaf.common.DB.query(DB.java:152)
+leaf.common.DB.sqlToJSONMap(DB.java:428)
+leaf.system.api.SysRoleApi.getRoleList(SysRoleApi.java:77)
+
+[ ERROR - 2025-04-09 13:51:16 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_rolewhere(role_id = '2')
+

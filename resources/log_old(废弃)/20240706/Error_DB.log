@@ -1,0 +1,13 @@
+[ ERROR - 2024-07-06 00:43:45 ================================================== ]
+ErrorMsg:Unknown column 'undefined' in 'field list'
+------
+SQL:1054
+SELECT a.menu_id, a.menu_name, a.parent_menu_id, a.menu_icon, a.url
+	, a.type, if(b.role_id = undefined, '1', '0') AS 'has_permission'
+FROM sys_menu a
+	LEFT JOIN sys_role_menu_rel b ON a.menu_id = b.menu_id
+		AND b.role_id = undefined
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.api.RoleApi.getRoleMenuTree(RoleApi.java:67)
+

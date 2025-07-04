@@ -1,0 +1,11 @@
+[ ERROR - 2024-09-25 09:49:33 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from sys_config a    inner join sys_config_role_rel b on a.config_id = b.config_' at line 1
+------
+SQL:1064
+select a.config_id,config_key,config_value,config_desc,config_type, from sys_config a    inner join sys_config_role_rel b on a.config_id = b.config_id    left join sys_role c on b.role_id = c.role_id  limit 0,10 
+------
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.sqlToJSONMap(DB.java:436)
+leaf.common.DB.sqlToJSONMap(DB.java:397)
+leaf.system.api.ConfigApi.getSystemConfigList(ConfigApi.java:99)
+

@@ -1,0 +1,37 @@
+=================== Error ===================
+Time:2023-11-01 13:28:25
+Message:null
+------
+lyf.common.Servlet.getCookie(Servlet.java:35)
+lyf.system.common.SysUser.getFrontendLogin(UserCommon.java:31)
+lyf.system.api.SystemApi.isLogin(SystemApi.java:84)
+
+=================== Error ===================
+Time:2023-11-01 13:28:58
+Message:null
+------
+lyf.common.Servlet.getCookie(Servlet.java:35)
+lyf.system.common.SysUser.getBackendLogin(UserCommon.java:71)
+lyf.system.interceptor.BackendSystemInterceptor.preHandle(BackendSystemInterceptor.java:16)
+
+=================== Error ===================
+Time:2023-11-01 13:29:22
+Message:null
+------
+lyf.common.Servlet.getCookie(Servlet.java:35)
+lyf.system.common.SysUser.getBackendLogin(UserCommon.java:71)
+lyf.system.interceptor.BackendSystemInterceptor.preHandle(BackendSystemInterceptor.java:16)
+
+=================== Error ===================
+Time:2023-11-01 13:34:49
+Message:null
+------
+lyf.system.common.SysUser.getCookie(UserCommon.java:87)
+lyf.system.common.SysUser.getBackendLogin(UserCommon.java:70)
+lyf.system.interceptor.BackendSystemInterceptor.preHandle(BackendSystemInterceptor.java:16)
+
+=================== Error ===================
+Time:2023-11-01 15:51:06
+Message:Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: lyf.common.DB.query(Ljava/lang/String;[Ljava/lang/Object;)Llyf/common/object/JSONList;
+------
+

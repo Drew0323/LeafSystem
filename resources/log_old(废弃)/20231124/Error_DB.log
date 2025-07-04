@@ -1,0 +1,34 @@
+=================== Error ===================
+Time:2023-11-24 12:44:37
+Message:Column 'user_group_id' in where clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_user a
+	LEFT JOIN sys_user_group b ON a.user_group_id = b.user_group_id
+WHERE user_group_id = '2'
+------
+lyf.common.DB.query(DB.java:132)
+lyf.common.object.SQLWhere.sqlToJSONMap(SQL.java:64)
+lyf.system.api.SystemUserApi.getUserInfo(SystemUserApi.java:150)
+
+=================== Error ===================
+Time:2023-11-24 13:17:58
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''SystemName' and isnull(grade_level)' at line 1
+------
+SQL:1064
+select config_key,config_value,can_visit_user_group_id from sys_config where config_key in 'SystemName' and isnull(grade_level)
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemApi.getSystemConfig(SystemApi.java:48)
+
+=================== Error ===================
+Time:2023-11-24 13:18:00
+Message:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''SystemName' and isnull(grade_level)' at line 1
+------
+SQL:1064
+select config_key,config_value,can_visit_user_group_id from sys_config where config_key in 'SystemName' and isnull(grade_level)
+------
+lyf.common.DB.query(DB.java:132)
+lyf.system.api.SystemApi.getSystemConfig(SystemApi.java:48)
+

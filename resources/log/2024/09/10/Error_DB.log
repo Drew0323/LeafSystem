@@ -1,0 +1,20 @@
+[ ERROR - 2024-09-10 21:09:59 ================================================== ]
+ErrorMsg:Table 'lyf_server.test' doesn't exist
+------
+SQL:1146
+SELECT 1
+FROM test
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.LogApi.getLog(LogApi.java:112)
+
+[ ERROR - 2024-09-10 21:10:04 ================================================== ]
+ErrorMsg:Table 'lyf_server.test' doesn't exist
+------
+SQL:1146
+SELECT 1
+FROM test
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.LogApi.getLog(LogApi.java:112)
+

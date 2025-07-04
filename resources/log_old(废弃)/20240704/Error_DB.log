@@ -1,0 +1,123 @@
+[ ERROR - 2024-07-04 00:30:39 ================================================== ]
+ErrorMsg:Unknown column 'b.s_disable' in 'where clause'
+------
+SQL:1054
+SELECT a.role_id
+FROM sys_user_role_rel a
+	LEFT JOIN sys_role b ON a.role_id = b.role_id
+WHERE a.user_id = '1'
+	OR a.user_id = 'null'
+	AND b.s_disable != 1
+ORDER BY role_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:82)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:30:42 ================================================== ]
+ErrorMsg:Unknown column 'b.s_disable' in 'where clause'
+------
+SQL:1054
+SELECT a.role_id
+FROM sys_user_role_rel a
+	LEFT JOIN sys_role b ON a.role_id = b.role_id
+WHERE a.user_id = '1'
+	OR a.user_id = 'null'
+	AND b.s_disable != 1
+ORDER BY role_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:82)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:30:46 ================================================== ]
+ErrorMsg:Unknown column 'b.s_disable' in 'where clause'
+------
+SQL:1054
+SELECT a.role_id
+FROM sys_user_role_rel a
+	LEFT JOIN sys_role b ON a.role_id = b.role_id
+WHERE a.user_id = '1'
+	OR a.user_id = 'null'
+	AND b.s_disable != 1
+ORDER BY role_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:82)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:31:51 ================================================== ]
+ErrorMsg:Unknown column 'b.s_disable' in 'where clause'
+------
+SQL:1054
+SELECT a.role_id
+FROM sys_user_role_rel a
+	LEFT JOIN sys_role b ON a.role_id = b.role_id
+WHERE a.user_id = '2'
+	OR a.user_id = 'null'
+	AND b.s_disable != 1
+ORDER BY role_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:82)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:33:45 ================================================== ]
+ErrorMsg:Column 'is_disable' in field list is ambiguous
+------
+SQL:1052
+SELECT a.user_id, is_disable
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+WHERE account = '刘宇枫2'
+	AND password = 'lyf123456'
+	AND c.is_allow_login_backend = 1
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.queryFirst(DB.java:182)
+lyf.system.api.UserApi.login(UserApi.java:57)
+
+[ ERROR - 2024-07-04 00:34:02 ================================================== ]
+ErrorMsg:Column 'is_disable' in field list is ambiguous
+------
+SQL:1052
+SELECT a.user_id, is_disable
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+WHERE account = '刘宇枫2'
+	AND password = 'lyf123456'
+	AND c.is_allow_login_backend = 1
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.queryFirst(DB.java:182)
+lyf.system.api.UserApi.login(UserApi.java:57)
+
+[ ERROR - 2024-07-04 00:34:52 ================================================== ]
+ErrorMsg:Column 'is_disable' in field list is ambiguous
+------
+SQL:1052
+SELECT a.user_id, is_disable
+FROM sys_user a
+	LEFT JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+WHERE account = '刘宇枫2'
+	AND password = '123'
+	AND c.is_allow_login_backend = 1
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.queryFirst(DB.java:182)
+lyf.system.api.UserApi.login(UserApi.java:57)
+
+[ ERROR - 2024-07-04 02:22:13 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and (!isnull(permission_key) and permission_key != '')' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_menu a    left join sys_role_menu_rel b on a.menu_id = b.menu_id where and (!isnull(permission_key) and permission_key != '')
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.sqlToJSONMap(DB.java:394)
+lyf.common.DB.sqlToJSONMap(DB.java:359)
+lyf.system.api.RoleApi.getRoleMenuPermissionKeyList(RoleApi.java:77)
+

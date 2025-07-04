@@ -1,0 +1,12 @@
+[ ERROR - 2025-03-18 18:05:56 ================================================== ]
+ErrorMsg:null
+------
+SQL:0
+------
+leaf.common.DB.getConnection(DB.java:493)
+leaf.common.DB.query(DB.java:146)
+leaf.common.DB.queryFirst(DB.java:167)
+leaf.system.api.SysUserApi.login(SysUserApi.java:60)
+
+[ ERROR - 2025-03-18 18:05:56 ================================================== ]
+jdbc获取连接失败，connection为空

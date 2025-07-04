@@ -1,0 +1,24 @@
+[ ERROR - 2024-07-04 00:30:39 ================================================== ]
+ErrorMsg:null
+------
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:88)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:30:42 ================================================== ]
+ErrorMsg:null
+------
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:88)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:30:46 ================================================== ]
+ErrorMsg:null
+------
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:88)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+
+[ ERROR - 2024-07-04 00:31:51 ================================================== ]
+ErrorMsg:null
+------
+lyf.system.interceptor.ApiGlobalInterceptor.permission(ApiGlobalInterceptor.java:88)
+lyf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:53)
+

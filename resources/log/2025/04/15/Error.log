@@ -1,0 +1,28 @@
+[ ERROR - 2025-04-15 21:53:05 ================================================== ]
+ErrorMsg:null
+------
+leaf.common.DB.getConnection(DB.java:547)
+leaf.common.DB.query(DB.java:145)
+leaf.common.DB.queryFirst(DB.java:167)
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:63)
+
+[ ERROR - 2025-04-15 21:53:27 ================================================== ]
+ErrorMsg:null
+------
+leaf.common.DB.query(DB.java:150)
+leaf.common.DB.queryFirst(DB.java:167)
+leaf.system.api.SysUserApi.isLogin(SysUserApi.java:127)
+
+[ ERROR - 2025-04-15 22:42:21 ================================================== ]
+ErrorMsg:leaf.system.api.test.TestApi.temp(org.apache.catalina.connector.RequestFacade, org.apache.catalina.connector.ResponseFacade, org.springframework.web.method.HandlerMethod)
+------
+'leaf.system.api.test.TestApi.temp'调用失败：没有找到静态方法
+leaf.common.Clazz.invokeStatic(Clazz.java:84)
+leaf.common.Clazz.invokeStaticByMethodPath(Clazz.java:118)
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:99)
+
+[ ERROR - 2025-04-15 22:42:21 ================================================== ]
+ErrorMsg:null
+------
+leaf.system.interceptor.ApiGlobalInterceptor.preHandle(ApiGlobalInterceptor.java:99)
+

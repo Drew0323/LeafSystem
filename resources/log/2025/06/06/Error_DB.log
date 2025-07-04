@@ -1,0 +1,59 @@
+[ ERROR - 2025-06-06 12:25:17 ================================================== ]
+ErrorMsg:Column 'user_id' in order clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_user aa
+	LEFT JOIN sys_user_role_rel ab ON aa.user_id = ab.user_id
+GROUP BY aa.user_id
+ORDER BY user_id DESC
+------
+leaf.common.DB.query(DB.java:151)
+leaf.common.DB.queryFirst(DB.java:167)
+leaf.common.DB.getQueryCount(DB.java:505)
+leaf.system.api.SysUserApi.getUserList(SysUserApi.java:391)
+
+[ ERROR - 2025-06-06 12:25:17 ================================================== ]
+ErrorMsg:获取记录条数失败
+------
+SQL:
+SELECT COUNT(1) AS 'count'
+FROM sys_user aa
+	LEFT JOIN sys_user_role_rel ab ON aa.user_id = ab.user_id
+GROUP BY aa.user_id
+ORDER BY user_id DESC
+
+[ ERROR - 2025-06-06 13:45:41 ================================================== ]
+ErrorMsg:Unknown column 'test04' in 'field list'
+------
+SQL:1054
+INSERT INTO sys_user (name, account, password, personal_signature, avatar
+	, birthday, phone, email, real_name, idcard
+	, sex, is_disable)
+VALUES ('test04', test04, '123', 'hahaha', 'null'
+	, NULL, '12345678901', '123', 'test04', 'test040404'
+	, 2, 1);
+SELECT @new_user_id := last_insert_id();
+INSERT INTO sys_user_role_rel (user_id, role_id)
+VALUES (@new_user_id, '5');
+INSERT INTO sys_user_role_rel (user_id, role_id)
+VALUES (@new_user_id, '4')
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysUserApi.updateUser(SysUserApi.java:513)
+
+[ ERROR - 2025-06-06 15:11:41 ================================================== ]
+ErrorMsg:Duplicate entry 'test06' for key 'sys_user.unique_account'
+------
+SQL:1062
+INSERT INTO sys_user (name, account, password, personal_signature, avatar
+	, birthday, phone, email, real_name, idcard
+	, sex, is_disable)
+VALUES ('test06', 'test06', '123', '', ''
+	, NULL, '', '', '', ''
+	, NULL, NULL);
+SELECT @new_user_id := last_insert_id()
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysUserApi.updateUser(SysUserApi.java:515)
+

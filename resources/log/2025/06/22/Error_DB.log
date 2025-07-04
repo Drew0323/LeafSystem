@@ -1,0 +1,9 @@
+[ ERROR - 2025-06-22 09:59:02 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ','测试配置','1');select @new_config_id:=last_insert_id()' at line 1
+------
+SQL:1064
+insert into sys_config(config_key,config_value,config_desc,config_type)value('TestConfig',,'测试配置','1');select @new_config_id:=last_insert_id();
+------
+leaf.common.DB.updateTransaction(DB.java:226)
+leaf.system.api.SysConfigApi.updateSystemConfig(SysConfigApi.java:266)
+

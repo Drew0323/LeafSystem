@@ -1,0 +1,60 @@
+=================== Error ===================
+Time:2023-12-05 20:43:36
+Message:EL1008E: Property or field 'data' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemApi$$EnhancerBySpringCGLIB$$c6401cdc.getSystemConfig(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:43:42
+Message:EL1008E: Property or field 'data' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemApi$$EnhancerBySpringCGLIB$$c6401cdc.getSystemConfig(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:43:45
+Message:EL1008E: Property or field 'data' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemApi$$EnhancerBySpringCGLIB$$c6401cdc.getSystemConfig(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:44:09
+Message:EL1008E: Property or field 'data' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemApi$$EnhancerBySpringCGLIB$$c6401cdc.getSystemConfig(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:52:37
+Message:EL1008E: Property or field 'springboot_cache_system_menu_getMenuTree' cannot be found on object of type 'org.springframework.cache.interceptor.CacheExpressionRootObject' - maybe not public or not valid?
+------
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$20584c1d.getMenuTree(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:55:18
+Message:EL1008E: Property or field 'systemMenuApi' cannot be found on object of type 'org.springframework.cache.interceptor.CacheExpressionRootObject' - maybe not public or not valid?
+------
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$257bd420.getMenuTree(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:55:53
+Message:EL1008E: Property or field 'systemMenuApi' cannot be found on object of type 'org.springframework.cache.interceptor.CacheExpressionRootObject' - maybe not public or not valid?
+------
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$b39f768b.getMenuTree(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 20:57:40
+Message:No cache could be resolved for 'Builder[public java.lang.String lyf.system.api.TestApi.deleteCache()] caches=[] | key='systemMenuApi.getMenuTree()' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',false,false' using resolver 'org.springframework.cache.interceptor.SimpleCacheResolver@21fcc95b'. At least one cache should be provided per cache operation.
+------
+lyf.system.api.TestApi$$EnhancerBySpringCGLIB$$ed2ce92d.deleteCache(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 21:09:16
+Message:EL1008E: Property or field 'IsSuccess' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$31e8fbd9.updateMenu(<generated>:-1)
+
+=================== Error ===================
+Time:2023-12-05 21:09:43
+Message:EL1008E: Property or field 'IsSuccess' cannot be found on object of type 'lyf.common.object.JSONMap' - maybe not public or not valid?
+------
+lyf.system.api.SystemMenuApi$$EnhancerBySpringCGLIB$$1d66858b.updateMenu(<generated>:-1)
+

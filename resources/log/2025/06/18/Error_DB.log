@@ -1,0 +1,114 @@
+[ ERROR - 2025-06-18 21:22:12 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'is_graduate' at row 1
+------
+SQL:1366
+INSERT INTO test_student (name, user_id, stuNo, class, is_graduate)
+VALUES ('小红', '3', '122113123', '12', '')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:111)
+
+[ ERROR - 2025-06-18 23:15:25 ================================================== ]
+ErrorMsg:Data truncation: Incorrect date value: '' for column 'birthday' at row 1
+------
+SQL:1292
+INSERT INTO test_student (name, stuNo, class, is_graduate, birthday
+	, create_time)
+VALUES ('小白', '202021', '121212', '1', ''
+	, '2025-06-18 23:15:22')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:124)
+
+[ ERROR - 2025-06-18 23:15:30 ================================================== ]
+ErrorMsg:Data truncation: Incorrect date value: '' for column 'birthday' at row 1
+------
+SQL:1292
+INSERT INTO test_student (name, stuNo, class, is_graduate, birthday
+	, create_time)
+VALUES ('小白', '202021', '121212', '1', ''
+	, '2025-06-18 23:15:22')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:124)
+
+[ ERROR - 2025-06-18 23:17:02 ================================================== ]
+ErrorMsg:Data truncation: Incorrect date value: '' for column 'birthday' at row 1
+------
+SQL:1292
+INSERT INTO test_student (name, stuNo, class, is_graduate, birthday
+	, create_time)
+VALUES ('小白', '123456', '1223', '1', ''
+	, '2025-06-18 23:17:00')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:124)
+
+[ ERROR - 2025-06-18 23:17:34 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'is_graduate' at row 1
+------
+SQL:1366
+INSERT INTO test_student (name, stuNo, class, is_graduate, birthday
+	, create_time)
+VALUES ('小白', '123456', '1223', '', ''
+	, '2025-06-18 23:17:00')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:124)
+
+[ ERROR - 2025-06-18 23:17:57 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'is_graduate' at row 1
+------
+SQL:1366
+INSERT INTO test_student (name, stuNo, class, is_graduate, birthday
+	, create_time)
+VALUES ('小白', '123456', '1223', '', '2025-06-18'
+	, '2025-06-18 23:17:00')
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:124)
+
+[ ERROR - 2025-06-18 23:43:15 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'sex' at row 1
+------
+SQL:1366
+UPDATE test_student
+SET name = '王五2', user_id = '2', stuNo = '0003', class = '计算机科学与技术2207', sex = '', is_graduate = '1', birthday = '', create_time = ''
+WHERE student_id = '3'
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:105)
+
+[ ERROR - 2025-06-18 23:43:21 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'sex' at row 1
+------
+SQL:1366
+UPDATE test_student
+SET name = '王五2', user_id = '2', stuNo = '0003', class = '计算机科学与技术2207', sex = '', is_graduate = '1', birthday = '2025-06-18', create_time = ''
+WHERE student_id = '3'
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:105)
+
+[ ERROR - 2025-06-18 23:43:25 ================================================== ]
+ErrorMsg:Incorrect integer value: '' for column 'sex' at row 1
+------
+SQL:1366
+UPDATE test_student
+SET name = '王五2', user_id = '2', stuNo = '0003', class = '计算机科学与技术2207', sex = '', is_graduate = '1', birthday = '2025-06-18', create_time = '2025-06-18 23:43:24'
+WHERE student_id = '3'
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:105)
+
+[ ERROR - 2025-06-18 23:44:28 ================================================== ]
+ErrorMsg:Data truncation: Incorrect date value: '' for column 'birthday' at row 1
+------
+SQL:1292
+UPDATE test_student
+SET name = '王五2', user_id = '2', stuNo = '0003', class = '计算机科学与技术2207', sex = '', is_graduate = '1', birthday = '', create_time = ''
+WHERE student_id = '3'
+------
+leaf.common.DB.update(DB.java:205)
+leaf.system.api.test.TestStudentApi.updateTestStudent(TestStudentApi.java:105)
+

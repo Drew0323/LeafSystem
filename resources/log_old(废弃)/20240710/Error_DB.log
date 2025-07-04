@@ -1,0 +1,44 @@
+[ ERROR - 2024-07-10 22:10:01 ================================================== ]
+ErrorMsg:Statement.executeQuery() cannot issue statements that do not produce result sets.
+------
+SQL:0
+INSERT INTO sys_menu (menu_name, parent_menu_id, menu_icon, url, type
+	, permission_key, is_show)
+VALUES ('345', NULL, '', '', '2'
+	, '', '0');
+SELECT @new_menu_id := last_insert_id();
+UPDATE sys_menu
+SET sort = @new_menu_id
+WHERE menu_id = @new_menu_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.queryFirst(DB.java:182)
+lyf.system.api.MenuApi.updateMenu(MenuApi.java:207)
+
+[ ERROR - 2024-07-10 22:10:31 ================================================== ]
+ErrorMsg:Statement.executeQuery() cannot issue statements that do not produce result sets.
+------
+SQL:0
+INSERT INTO sys_menu (menu_name, parent_menu_id, menu_icon, url, type
+	, permission_key, is_show)
+VALUES ('345', NULL, '', '', '2'
+	, '', '0');
+SELECT @new_menu_id := last_insert_id();
+UPDATE sys_menu
+SET sort = @new_menu_id
+WHERE menu_id = @new_menu_id
+------
+lyf.common.DB.query(DB.java:148)
+lyf.system.api.MenuApi.updateMenu(MenuApi.java:207)
+
+[ ERROR - 2024-07-10 23:27:05 ================================================== ]
+ErrorMsg:Data truncation: Truncated incorrect DOUBLE value: 'undefined'
+------
+SQL:1292
+UPDATE sys_menu
+SET menu_name = '新菜单', parent_menu_id = 3, menu_icon = '', url = '', type = '-2', permission_key = '', is_show = '0'
+WHERE menu_id = 'undefined'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.MenuApi.updateMenu(MenuApi.java:178)
+

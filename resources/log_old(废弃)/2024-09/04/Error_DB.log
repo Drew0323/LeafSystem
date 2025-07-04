@@ -1,0 +1,54 @@
+[ ERROR - 2024-09-04 14:17:07 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '''''' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in ''''
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:427)
+
+[ ERROR - 2024-09-04 14:20:32 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '''''' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in ''''
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:427)
+
+[ ERROR - 2024-09-04 14:23:23 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '''''' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in ''''
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:428)
+
+[ ERROR - 2024-09-04 14:29:02 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '''z''' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in ''z''
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:428)
+
+[ ERROR - 2024-09-04 14:30:01 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''z'' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in 'z'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:428)
+
+[ ERROR - 2024-09-04 14:43:15 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''5','4'' at line 1
+------
+SQL:1064
+update sys_user set is_disable = null where user_id in '5','4'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.batchUpdateUser(UserApi.java:432)
+

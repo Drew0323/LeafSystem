@@ -1,0 +1,15 @@
+=================== Error ===================
+Time:2023-10-30 10:35:20
+Message:java.io.FileNotFoundException: E:\ProjectRoot\lyf\system\upload\resources\upload (系统找不到指定的路径。)
+------
+lyf.system.api.SystemApi.upload(SystemApi.java:100)
+
+=================== Error ===================
+Time:2023-10-30 10:42:25
+Message:java.io.FileNotFoundException: E:\ProjectRoot\lyf\system\resources\upload\111.webp (系统找不到指定的路径。)
+------
+lyf.system.api.SystemApi.upload(SystemApi.java:106)
+
+=================== Error ===================
+Time:2023-10-30 13:43:02
+Message:获取系统配置失败

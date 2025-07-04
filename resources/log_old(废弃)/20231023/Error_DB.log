@@ -1,0 +1,15 @@
+=================== Error ===================
+Time:2023-10-23 21:09:36
+Message:Unknown column 'ee' in 'order clause'
+------
+SQL:1054
+SELECT user_id, user_group_no, name, account, personal_signature
+	, avatar, phone, email, real_name, idcard
+	, sex, is_disable, login_ip, login_time
+FROM sys_user
+WHERE 1 = 1
+ORDER BY ee ASC
+------
+lyf.common.DB.query(DB.java:111)
+lyf.system.api.UserApi.getUserInfo(UserApi.java:83)
+

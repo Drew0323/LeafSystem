@@ -1,0 +1,15 @@
+=================== Error ===================
+Time:2023-11-05 00:22:04
+Message:Incorrect parameter count in the call to native function 'ifnull'
+------
+SQL:1582
+SELECT user_grade
+FROM sys_user
+WHERE user_id = '2'
+	AND ifnull(is_disable, '') != 1
+	AND ifnull(is_delete) != 1
+------
+lyf.common.DB.query(DB.java:107)
+lyf.common.DB.queryFirst(DB.java:135)
+lyf.system.interceptor.BackendSystemInterceptor.preHandle(BackendSystemInterceptor.java:29)
+

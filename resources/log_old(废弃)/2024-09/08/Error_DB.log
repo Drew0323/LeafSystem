@@ -1,0 +1,10 @@
+[ ERROR - 2024-09-08 21:35:32 ================================================== ]
+ErrorMsg:Cannot delete or update a parent row: a foreign key constraint fails (`lyf_server`.`sys_user_role_rel`, CONSTRAINT `fk_sys_user_role_rel_sys_user` FOREIGN KEY (`user_id`) REFERENCES `sys_user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+------
+SQL:1451
+DELETE FROM sys_user
+WHERE user_id = '3'
+------
+lyf.common.DB.update(DB.java:197)
+lyf.system.api.UserApi.updateUser(UserApi.java:361)
+

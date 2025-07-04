@@ -1,0 +1,13 @@
+[ ERROR - 2024-07-13 23:22:17 ================================================== ]
+ErrorMsg:Column 'is_disable' in where clause is ambiguous
+------
+SQL:1052
+SELECT a.user_id, c.role_id, c.role_name
+FROM sys_user a
+	INNER JOIN sys_user_role_rel b ON a.user_id = b.user_id
+	LEFT JOIN sys_role c ON b.role_id = c.role_id
+WHERE ifnull(is_disable, 0) = '0'
+------
+lyf.common.DB.query(DB.java:146)
+lyf.system.api.UserApi.getUserList(UserApi.java:193)
+

@@ -1,0 +1,15 @@
+=================== Error ===================
+Time:2023-11-04 10:15:05
+Message:Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.impl.IOFileUploadException: Processing of multipart/form-data request failed. java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+------
+
+=================== Error ===================
+Time:2023-11-04 10:15:05
+Message:Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.impl.IOFileUploadException: Processing of multipart/form-data request failed. java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+------
+
+=================== Error ===================
+Time:2023-11-04 10:21:44
+Message:Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.impl.IOFileUploadException: Processing of multipart/form-data request failed. java.io.EOFException: Unexpected EOF read on the socket
+------
+

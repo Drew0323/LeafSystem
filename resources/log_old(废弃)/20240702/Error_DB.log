@@ -1,0 +1,33 @@
+[ ERROR - 2024-07-02 16:24:40 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by birthday asc' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_userorder by birthday asc 
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.sqlToJSONMap(DB.java:394)
+lyf.common.DB.sqlToJSONMap(DB.java:369)
+lyf.system.api.SystemUserApi.getUserList(SystemUserApi.java:183)
+
+[ ERROR - 2024-07-02 16:24:41 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by birthday desc' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_userorder by birthday desc 
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.sqlToJSONMap(DB.java:394)
+lyf.common.DB.sqlToJSONMap(DB.java:369)
+lyf.system.api.SystemUserApi.getUserList(SystemUserApi.java:183)
+
+[ ERROR - 2024-07-02 16:24:42 ================================================== ]
+ErrorMsg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by birthday asc' at line 1
+------
+SQL:1064
+select count(1) 'count' from sys_userorder by birthday asc 
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.sqlToJSONMap(DB.java:394)
+lyf.common.DB.sqlToJSONMap(DB.java:369)
+lyf.system.api.SystemUserApi.getUserList(SystemUserApi.java:183)
+

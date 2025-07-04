@@ -1,0 +1,16 @@
+[ ERROR - 2024-07-05 23:04:35 ================================================== ]
+ErrorMsg:Column 'sort' in order clause is ambiguous
+------
+SQL:1052
+SELECT COUNT(1) AS 'count'
+FROM sys_menu a
+	LEFT JOIN sys_menu b ON a.parent_menu_id = b.menu_id
+ORDER BY sort DESC
+------
+lyf.common.DB.query(DB.java:148)
+lyf.common.DB.sqlToJSONMap(DB.java:394)
+lyf.common.DB.sqlToJSONMap(DB.java:369)
+lyf.system.api.MenuApi.getMenuList(MenuApi.java:75)
+lyf.system.api.MenuApi$$FastClassBySpringCGLIB$$daf97e9d.invoke(<generated>:-1)
+lyf.system.api.MenuApi$$EnhancerBySpringCGLIB$$853c4ccc.getMenuList(<generated>:-1)
+
